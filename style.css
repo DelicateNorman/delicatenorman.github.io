@@ -1,0 +1,255 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --accent-color: #444444;
+    --secondary-text: #666666;
+    --border-color: #eeeeee;
+    --font-serif: 'Instrument Serif', 'Georgia', serif;
+    --font-sans: 'Inter', -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Layout */
+.layout-wrapper {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+aside {
+    width: 400px;
+    padding: 80px 60px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+    background: #fff;
+    z-index: 10;
+}
+
+main {
+    flex: 1;
+    padding: 80px 80px;
+    background: #fff;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    margin-bottom: 2rem;
+}
+
+.social-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.social-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.social-nav a:hover {
+    border-bottom: 1px solid #000;
+}
+
+/* Sections */
+section {
+    margin-bottom: 8rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: #000;
+}
+
+/* About (inside sidebar or top of main) */
+#about p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Publications - Large Images */
+.pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.pub-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pub-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.pub-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid var(--border-color);
+}
+
+.pub-item:hover .pub-image img {
+    transform: scale(1.01);
+}
+
+.pub-content .title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    line-height: 1.3;
+}
+
+.pub-authors {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    margin-bottom: 0.5rem;
+}
+
+.pub-authors span.me {
+    text-decoration: underline;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.pub-meta {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--accent-color);
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.pub-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.pub-links a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid #111;
+    transition: all 0.2s ease;
+}
+
+.pub-links a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Skills & Honors */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.skill-category h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.honors-list {
+    list-style: none;
+}
+
+.honors-list li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.honors-list li span.year {
+    color: #999;
+}
+
+footer {
+    padding: 4rem 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .layout-wrapper {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 60px 40px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    main {
+        padding: 60px 40px;
+    }
+}
