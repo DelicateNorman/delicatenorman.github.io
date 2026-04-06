@@ -128,7 +128,33 @@ ul li {
     font-style: italic;
     margin-bottom: 8px;
     color: var(--secondary-text);
-}4px 12px;
+}
+
+.pub-badge {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid #d8b24a;
+    background-color: #fff7db;
+    color: #8a6512;
+    font-size: 0.72em;
+    font-family: "Instrument Sans", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.pub-links {
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.pub-links a {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 0.9em;
+    padding: 4px 12px;
     border-radius: 6px;
     border: 1px solid #eee;
     background-color: #fafafa;
@@ -136,18 +162,7 @@ ul li {
 
 .pub-links a:hover {
     background-color: #f0f0f0;
-    border-color: #ccc
-.pub-links {
-    margin-top: 10px;
-}
--top: 20px;
-    border: 1px solid #eee;
-    border-radius: 8px
-    display: inline-block;
-    margin-right: 12px;
-    font-size: 0.9em;
-    padding: 2px 0;
-    background-color: transparent;
+    border-color: #ccc;
 }
 
 .publication img {
