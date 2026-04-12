@@ -65,6 +65,17 @@ a:hover {
     background-color: #f9f9f9;
 }
 
+.highlight-link {
+    color: #1d4ed8;
+    border-bottom-color: #93c5fd;
+}
+
+.highlight-link:hover {
+    color: #1e40af;
+    border-bottom-color: #1e40af;
+    background-color: #eff6ff;
+}
+
 /* Sections */
 section {
     margin-bottom: 40px;
