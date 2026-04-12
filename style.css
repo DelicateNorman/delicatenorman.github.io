@@ -182,6 +182,13 @@ ul li {
     max-width: 100%;
 }
 
+.publication object {
+    margin: 15px 0;
+    border: 1px solid #eee;
+    width: 100%;
+    max-width: 100%;
+}
+
 /* Miscellaneous images */
 .misc-img {
     max-width: 400px;
