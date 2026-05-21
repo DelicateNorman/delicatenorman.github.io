@@ -21,7 +21,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 50px 20px;
-    cursor: url("assets/hachi-cursor.png") 8 8, auto;
+    cursor: url("assets/hachi-cursor-final.svg") 0 0, auto;
 }
 
 /* Animations */
@@ -81,7 +81,7 @@ a:hover {
 
 a,
 button {
-    cursor: url("assets/hachi-cursor.png") 8 8, pointer;
+    cursor: url("assets/hachi-cursor-final.svg") 0 0, pointer;
 }
 
 .highlight-link {
@@ -139,8 +139,16 @@ ul li {
     color: #dc2626;
 }
 
+/* Inline Emojis */
+.inline-emoji {
+    height: 1.2em;
+    vertical-align: sub;
+    margin: 0 2px;
+}
+
 /* Publications */
 .publication {
+    position: relative;
     margin-bottom: 40px;
     padding: 25px;
     background-color: #ffffff;
@@ -148,6 +156,16 @@ ul li {
     border: 1px solid #f0f0f0;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pub-mascot {
+    position: absolute;
+    top: -55px; /* Precise adjustment to align mascot base line with box border */
+    right: 15px;
+    width: 65px;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
 }
 
 .publication:hover {
