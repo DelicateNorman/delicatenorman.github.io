@@ -139,6 +139,17 @@ ul li {
     color: #dc2626;
 }
 
+/* News scroll */
+.news-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.news-scroll ul {
+    margin-bottom: 0;
+}
+
 /* Inline Emojis */
 .inline-emoji {
     height: 1.2em;

@@ -11,6 +11,8 @@ The site is intentionally simple: a static `index.html`, one `style.css`, a smal
 - `script.js`: intersection-observer animation for sections.
 - `assets/CV_Xinglang_Zhang.pdf`: downloadable CV.
 - `assets/Figure2-*.png`, `assets/fig2_*.png`: publication figures shown in publication cards.
+- `assets/bilibili.png`, `assets/rednote.png`, `assets/photograph.png`: compact social and photography icons used in homepage cards.
+- `assets/EA.png`, `assets/Class.png`, `assets/华中科技大学-logo-512px.png`: leadership icons used in the experience section.
 - `assets/hachi-*.png`: Hachiware-style personal visual assets used in the current website.
 - `assets/albums.png`, `assets/hachi.png`: older miscellaneous images retained in the asset library but not currently displayed.
 
@@ -24,14 +26,18 @@ The page currently contains these sections:
 - Publications: three paper cards with title, authors, venue, summary, links, and figure.
 - Research Interests.
 - Honors & Awards.
+- Leadership Experience.
 - Technical Skills.
+- Social Media: two compact cards for Bilibili and Rednote.
 - Miscellaneous: three compact personal cards for music, favorite character, and Ultimate Frisbee.
+- Miscellaneous also includes a Photography card when available.
 - Footer: last updated date.
 
 Important naming convention:
 
 - In the About paragraph, advisers/supervisors are written as `Professor Zikai Song` and `Professor Heng Ji`.
 - In publication author metadata, keep names as author names only, e.g. `Corresponding author: Zikai Song`; do not add `Professor` there.
+- When linking institutions in honors or profile text, use blue inline links for live institutional pages, for example `Qiming College` and `Peking University`.
 
 ## Visual Direction
 
@@ -40,6 +46,8 @@ The site should remain a clean academic homepage, not a full illustrated landing
 - `assets/hachi-head.png`: square avatar next to `Xinglang Zhang`.
 - `assets/hachi-reading.png`: larger About-section sticker, floated on desktop and stacked on mobile.
 - `assets/hachi-music.png`, `assets/hachi-flower.png`, `assets/hachi-frisbee.png`: images inside Miscellaneous cards.
+- `assets/bilibili.png`, `assets/rednote.png`, `assets/photograph.png`: compact icon assets for Social Media and Photography cards.
+- `assets/EA.png`, `assets/Class.png`, `assets/华中科技大学-logo-512px.png`: compact icon assets for Leadership Experience cards.
 - `assets/hachi-cursor.png`: small custom cursor.
 
 When adding new images:
@@ -90,6 +98,7 @@ When adding new images:
    - Remove root-level generated PNG drafts after copying the final version into `assets/`.
    - Keep only assets referenced by the site or intentionally retained as source material.
    - Do not commit `.DS_Store` changes.
+   - Keep `.DS_Store` ignored in `.gitignore` so these files do not reappear in commits.
 
 6. Commit with a short, direct message.
 
