@@ -248,6 +248,65 @@ ul li {
     max-width: 100%;
 }
 
+/* Leadership and skills */
+.leadership-list,
+.skills-grid {
+    display: grid;
+    gap: 14px;
+}
+
+.leadership-item,
+.skills-grid > div {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.leadership-item {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+}
+
+.leadership-item img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border: 1px solid #f0f0f0;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.leadership-role {
+    font-weight: bold;
+    line-height: 1.35;
+}
+
+.leadership-date {
+    margin-top: 3px;
+    color: var(--secondary-text);
+    font-size: 0.95em;
+}
+
+.skills-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+}
+
+.skills-grid > div {
+    padding: 16px 18px;
+}
+
+.skills-grid h3 {
+    font-size: 1.05em;
+    margin-bottom: 6px;
+}
+
+.compact-list {
+    margin-bottom: 0;
+}
+
 /* Miscellaneous images */
 .misc-img {
     max-width: 400px;
@@ -326,6 +385,10 @@ footer {
     }
 
     .personal-card {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
         grid-template-columns: 1fr;
     }
 
