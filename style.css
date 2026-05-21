@@ -21,6 +21,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 50px 20px;
+    cursor: url("assets/hachi-cursor.png") 8 8, auto;
 }
 
 /* Animations */
@@ -39,9 +40,22 @@ header {
 }
 
 h1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-size: 2.2em;
     font-weight: normal;
     margin-bottom: 10px;
+}
+
+.name-mascot {
+    width: 46px;
+    height: 46px;
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+    object-fit: contain;
+    vertical-align: middle;
 }
 
 header p {
@@ -65,6 +79,11 @@ a:hover {
     background-color: #f9f9f9;
 }
 
+a,
+button {
+    cursor: url("assets/hachi-cursor.png") 8 8, pointer;
+}
+
 .highlight-link {
     color: #1d4ed8;
     border-bottom-color: #93c5fd;
@@ -79,6 +98,22 @@ a:hover {
 /* Sections */
 section {
     margin-bottom: 40px;
+}
+
+.about-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about-sticker {
+    float: right;
+    width: 300px;
+    max-width: 48%;
+    margin: 0 0 10px 18px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    object-fit: contain;
 }
 
 h2 {
@@ -201,6 +236,43 @@ ul li {
     border: 1px solid #eee;
 }
 
+.personal-cards {
+    display: grid;
+    gap: 14px;
+}
+
+.personal-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    align-items: center;
+    gap: 18px;
+    min-height: 150px;
+    padding: 16px 18px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.personal-card h3 {
+    font-size: 1.05em;
+    margin-bottom: 6px;
+}
+
+.personal-card p {
+    color: var(--secondary-text);
+}
+
+.personal-card img {
+    width: 220px;
+    height: 130px;
+    object-fit: contain;
+    object-position: center;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    background: #fff;
+}
+
 /* Footer */
 footer {
     margin-top: 60px;
@@ -218,5 +290,27 @@ footer {
     
     h1 {
         font-size: 1.8em;
+    }
+
+    .name-mascot {
+        width: 38px;
+        height: 38px;
+    }
+
+    .about-sticker {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 0 14px 0;
+    }
+
+    .personal-card {
+        grid-template-columns: 1fr;
+    }
+
+    .personal-card img {
+        width: 100%;
+        height: 150px;
     }
 }
