@@ -6,9 +6,11 @@ The site is intentionally simple: a static `index.html`, one `style.css`, a smal
 
 ## Project Structure
 
-- `index.html`: all page content and section ordering.
-- `style.css`: typography, layout, publication cards, Hachiware visual accents, and responsive rules.
+- `index.html`: all page content, SEO metadata, Person JSON-LD, and section ordering.
+- `style.css`: typography, layout, publication cards, News scroll, Hachiware visual accents, and responsive rules.
 - `script.js`: intersection-observer animation for sections.
+- `sitemap.xml`: sitemap submitted to Google Search Console.
+- `google*.html`: Google Search Console ownership verification file (do not remove).
 - `assets/CV_Xinglang_Zhang.pdf`: downloadable CV.
 - `assets/Figure2-*.png`, `assets/fig2_*.png`: publication figures shown in publication cards.
 - `assets/bilibili.png`, `assets/rednote.png`, `assets/photograph.png`: compact social and photography icons used in homepage cards.
@@ -20,24 +22,39 @@ The site is intentionally simple: a static `index.html`, one `style.css`, a smal
 
 The page currently contains these sections:
 
-- Header: name, title, affiliation, contact links, and a small square Hachiware head beside the name.
-- About: research profile, current advisers/supervisors, and a reading Hachiware sticker.
-- News: chronological updates, newest first.
-- Publications: three paper cards with title, authors, venue, summary, links, and figure.
-- Research Interests.
+- Header: name, title, affiliation, contact links, and a small square Hachiware head (alt text set to the person's name for SEO).
+- About: research profile written in third person, current advisers/supervisors, and a reading Hachiware sticker (decorative, alt empty).
+- News: chronological updates newest first, displayed in a scrollable container (`.news-scroll`, ~5 items visible by default).
+- Publications: four paper cards with title, authors, venue, summary, links, and figure. Preceded by a brief "Selected publications by Xinglang Zhang." intro.
+- Research Interests: stated as "Xinglang Zhang's research interests include...".
 - Honors & Awards.
 - Leadership Experience.
 - Technical Skills.
-- Social Media: two compact cards for Bilibili and Rednote.
-- Miscellaneous: three compact personal cards for music, favorite character, and Ultimate Frisbee.
-- Miscellaneous also includes a Photography card when available.
+- Social Media: two cards for Bilibili (linked) and Rednote (linked to profile).
+- Miscellaneous: three compact personal cards for music, favorite character, and Ultimate Frisbee, plus Photography.
 - Footer: last updated date.
 
-Important naming convention:
+### SEO
 
-- In the About paragraph, advisers/supervisors are written as `Professor Zikai Song` and `Professor Heng Ji`.
+The page targets Google discoverability for the query "Xinglang Zhang":
+
+- `<title>`: `Xinglang Zhang | Undergraduate Researcher in AI Reasoning, HUST`
+- `<meta name="description">`: one-sentence summary with name, affiliation, and research areas.
+- `<script type="application/ld+json">`: Person schema with `sameAs` pointing to Google Scholar, GitHub, and arXiv.
+- `sitemap.xml`: registered in Google Search Console.
+- Google Search Console ownership verified via `google*.html` at the repo root.
+- The full name "Xinglang Zhang" appears naturally ~12 times across the page.
+- All decorative images (mascots, stickers, card illustrations) use `alt=""`. The header avatar uses `alt="Xinglang Zhang"`. Publication figures keep descriptive alt text.
+
+Important conventions:
+
+- The About paragraph is written in third person (e.g. "Xinglang Zhang is..." not "Hi, I'm...") for both readability and SEO.
+- Advisers/supervisors are written as `Professor Zikai Song` and `Professor Heng Ji`.
 - In publication author metadata, keep names as author names only, e.g. `Corresponding author: Zikai Song`; do not add `Professor` there.
 - When linking institutions in honors or profile text, use blue inline links for live institutional pages, for example `Qiming College` and `Peking University`.
+- Decorative images (mascots, stickers, card illustrations) use `alt=""` so they don't dilute page semantics for search engines.
+- The header avatar uses `alt="Xinglang Zhang"`. Publication figures and non-decorative images keep descriptive alt text.
+- Social Media cards use `<a class="social-card">` when they have an external profile link, `<article class="social-card">` otherwise.
 
 ## Visual Direction
 
@@ -99,6 +116,7 @@ When adding new images:
    - Keep only assets referenced by the site or intentionally retained as source material.
    - Do not commit `.DS_Store` changes.
    - Keep `.DS_Store` ignored in `.gitignore` so these files do not reappear in commits.
+   - Never remove `google*.html` or `sitemap.xml` from the repo root—they are needed for Google Search Console.
 
 6. Commit with a short, direct message.
 
@@ -106,17 +124,20 @@ When adding new images:
 
 Recent commits show the intended workflow:
 
+- `Add SEO improvements for Google discoverability`: title, meta description, Person JSON-LD, sitemap.xml, third-person About, image alt cleanup.
+- `Add Google Search Console verification file`: ownership verification.
+- `Add scrollable News section and Rednote profile link`: News scroll container and Rednote card hyperlink.
+- `Add social media and photography details`: Bilibili, Rednote, and Photography cards.
+- `Add leadership and language skills`: leadership cards and language section.
+- `Add under-review preference publication`: new publication card.
 - `Add Hachiware visual accents`: added personal visual assets and CSS/HTML hooks.
 - `Update advisor titles`: adjusted adviser/supervisor naming in the About section.
-- `Update profile research affiliations`: updated profile and affiliation text.
 - `Updated Resume`: replaced the CV PDF.
-- `Highlight oral news in red` and `Update ACL 2026 oral news`: small news/content updates.
-- `Add Google Scholar link to contact section`: contact-link maintenance.
-- `Minor fix`: small cleanup commits.
 
 Prefer commit messages like:
 
 - `Update CV`
+- `Add SEO improvements for Google discoverability`
 - `Add Hachiware visual accents`
 - `Update publication links`
 - `Add ACL news update`
