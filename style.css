@@ -139,6 +139,11 @@ ul li {
     color: #dc2626;
 }
 
+.honor-emphasis {
+    color: #b91c1c;
+    font-weight: 700;
+}
+
 /* News scroll */
 .news-scroll {
     max-height: 300px;
