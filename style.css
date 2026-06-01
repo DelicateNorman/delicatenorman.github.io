@@ -62,6 +62,15 @@ header p {
     margin: 5px 0;
 }
 
+.email-line {
+    color: var(--secondary-text);
+}
+
+.seeking-notice {
+    color: #dc2626;
+    font-weight: 700;
+}
+
 .contact-links {
     margin-top: 15px;
 }
