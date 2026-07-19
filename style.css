@@ -318,7 +318,20 @@ ul li {
 }
 
 .service-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 64px;
+    align-items: center;
+    gap: 14px;
     padding: 14px 16px;
+}
+
+.service-item img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border: 1px solid #f0f0f0;
+    border-radius: 50%;
+    background: #fff;
 }
 
 .service-role {
