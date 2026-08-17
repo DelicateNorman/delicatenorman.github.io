@@ -254,6 +254,36 @@ urlcolor=primaryColor
 \section{Research Experience}
 
 \begin{twocolentry}{
+    Jul 2026 -- Present
+}
+\textbf{State-Aware Test-Time Training for Tool-Using Language Models}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+
+\begin{onecolentry}
+    \textbf{Research Intern}, BLENDER Lab, University of Illinois Urbana-Champaign (UIUC) \\
+    \textbf{Mentor:}
+    \href{https://qiancheng0.github.io/}
+    {\textcolor{blue}{Cheng Qian}}
+    \quad
+    \textbf{Advisor:}
+    \href{https://blender.cs.illinois.edu/hengji.html}
+    {\textcolor{blue}{Heng Ji}} \\
+    Research Areas: Test-Time Training, Tool Learning, LLM Agents, Adaptive Data Selection
+
+    \begin{highlights}
+        \item \textbf{Framework:} Formulated tool-learning adaptation as a state-aware test-time training problem---deciding which self-generated experiences to learn, at what dose, in which order, and when to stop---and introduced \emph{Transfer Value} to quantify their marginal utility on future queries.
+
+        \item \textbf{Method:} Developed a label-free hierarchical experience-selection framework that combines cluster-level NLL probes, confidence signals, and structural diversity, avoiding exhaustive Source--Target transfer evaluation.
+
+        \item \textbf{Findings:} Demonstrated that experience utility depends on the current Solver state, exposure dose, and training order; identified a transition from early tool-protocol learning to later semantic learning, with 25/32 held-out experiences flipping from beneficial to harmful after adaptation.
+
+        \item \textbf{Results:} Without access to any external ground-truth or target labels, improved Exact accuracy from 7.71\% for the base model to 38.93\% (+31.22 pp). State-aware reselection further outperformed static selection by +8.95 pp in Exact accuracy. Preparing an \textbf{ICLR} submission.
+    \end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{
     Feb 2026 -- Present
 }
 \textbf{Hexagonal Semantic Reasoning for Reliable LLMs}
