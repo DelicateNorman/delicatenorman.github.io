@@ -1,1 +1,12 @@
 .DS_Store
+._*
+
+# Keep editable LaTeX source in version control, but not local build output.
+CV/*.aux
+CV/*.fdb_latexmk
+CV/*.fls
+CV/*.log
+CV/*.out
+CV/*.pdf
+CV/*.xdv
+CV/tmp/
