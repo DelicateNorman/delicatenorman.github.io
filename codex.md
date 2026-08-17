@@ -11,8 +11,12 @@ The site is intentionally simple: a static `index.html`, one `style.css`, a smal
 - `script.js`: intersection-observer animation for sections.
 - `sitemap.xml`: sitemap submitted to Google Search Console.
 - `google*.html`: Google Search Console ownership verification file (do not remove).
-- `assets/CV_Xinglang_Zhang.pdf`: downloadable CV.
+- `CV/ml.tex`: editable LaTeX source for the CV; build artifacts in `CV/` are ignored.
+- `CV/ml.pdf`: locally compiled CV output.
+- `assets/CV_Xinglang_Zhang.pdf`: current CV PDF opened in the browser from the homepage.
 - `assets/Figure2-*.png`, `assets/fig2_*.png`: publication figures shown in publication cards.
+- `assets/Overview-Social-Intelligence-Modeling.png`: overview figure for the Social Intelligence Modeling survey.
+- `assets/Overview-of-EarthVerse.png`: full overview figure for the EarthVerse benchmark.
 - `assets/bilibili.png`, `assets/rednote.png`, `assets/photograph.png`: compact social and photography icons used in homepage cards.
 - `assets/EA.png`, `assets/Class.png`, `assets/华中科技大学-logo-512px.png`: leadership icons used in the experience section.
 - `assets/hachi-*.png`: Hachiware-style personal visual assets used in the current website.
@@ -25,7 +29,7 @@ The page currently contains these sections:
 - Header: name, title, affiliation, contact links, and a small square Hachiware head (alt text set to the person's name for SEO).
 - About: research profile written in third person, current advisers/supervisors, and a reading Hachiware sticker (decorative, alt empty).
 - News: chronological updates newest first, displayed in a scrollable container (`.news-scroll`, ~5 items visible by default).
-- Publications: four paper cards with title, authors, venue, summary, links, and figure. Preceded by a brief "Selected publications by Xinglang Zhang." intro.
+- Publications: six paper cards with title, authors, venue, summary, links, and figure. The two newest co-authored papers are appended after Xinglang's main first-/second-author works. Preceded by a brief "Selected publications by Xinglang Zhang." intro.
 - Research Interests: stated as "Xinglang Zhang's research interests include...".
 - Honors & Awards.
 - Leadership Experience.
@@ -95,6 +99,17 @@ When adding new images:
    rg -n "assets/|\\.png|\\.pdf" index.html style.css
    git diff --check
    ```
+
+   For CV changes, compile and sync the homepage copy:
+
+   ```bash
+   cd CV
+   latexmk -xelatex -interaction=nonstopmode -halt-on-error ml.tex
+   cp ml.pdf ../assets/CV_Xinglang_Zhang.pdf
+   cd ..
+   ```
+
+   Keep the homepage CV link as a normal PDF link without the HTML `download` attribute so browsers can preview it inline.
 
 4. Visually verify layout when changing images or CSS:
 
