@@ -286,6 +286,7 @@ ul li {
 /* Leadership and skills */
 .leadership-list,
 .service-list,
+.activity-list,
 .skills-grid {
     display: grid;
     gap: 14px;
@@ -293,6 +294,7 @@ ul li {
 
 .leadership-item,
 .service-item,
+.activity-item,
 .skills-grid > div {
     border: 1px solid #eee;
     border-radius: 10px;
@@ -350,6 +352,21 @@ ul li {
 }
 
 .service-date {
+    margin-top: 3px;
+    color: var(--secondary-text);
+    font-size: 0.95em;
+}
+
+.activity-item {
+    padding: 14px 16px;
+}
+
+.activity-title {
+    font-weight: bold;
+    line-height: 1.35;
+}
+
+.activity-date {
     margin-top: 3px;
     color: var(--secondary-text);
     font-size: 0.95em;
