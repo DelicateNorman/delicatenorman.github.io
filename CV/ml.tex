@@ -59,6 +59,7 @@ urlcolor=primaryColor
     \newcommand{\honornote}[1]{{\small\honornotefont\itshape (#1)}}
 \fi
 \newcommand{\distinction}[1]{\textcolor{darkRed}{#1}}
+\newcommand{\pubnum}[1]{{\footnotesize\textbf{[#1]}}}
 
 % Some settings:
 \raggedright
@@ -215,9 +216,7 @@ urlcolor=primaryColor
 \section{Publications}
 
 \begin{onecolentry}
-
-\begin{onecolentry}
-\textbf{Logical Phase Transitions: Understanding Collapse in LLM Logical Reasoning} \\
+\pubnum{1}~\textbf{Logical Phase Transitions: Understanding Collapse in LLM Logical Reasoning} \\
 \textit{\textbf{Xinglang Zhang*}, Yunyao Zhang*, et al.} | \textbf{\distinction{ACL 2026} (Main Conference)} |
 \href{https://arxiv.org/abs/2601.02902}{\color{blue}[ArXiv]} |
 \href{https://github.com/AI4SS/Logical-Phase-Transitions}{\color{blue}[Code]}
@@ -225,46 +224,56 @@ urlcolor=primaryColor
 \vspace{0.05 cm}
 
 \begin{onecolentry}
-\textbf{Semantic-Aware Logical Reasoning via a Semiotic Framework} \\
+\pubnum{2}~\textbf{Semantic-Aware Logical Reasoning via a Semiotic Framework} \\
 \textit{Yunyao Zhang, \textbf{Xinglang Zhang}, et al.} | \textbf{\distinction{ACL 2026} (\distinction{Oral})} |
 \href{https://arxiv.org/abs/2509.24765}{\color{blue}[ArXiv]} |
 \href{https://github.com/AI4SS/Logic-Agent}{\color{blue}[Code]}
 \end{onecolentry}
 \vspace{0.05 cm}
 
-\textbf{IntervenSim: Intervention-Aware Social Network Simulation for Opinion Dynamics} \\
-\textit{Yunyao Zhang, Zuocheng Ying, \textbf{Xinglang Zhang}} |
-\href{https://arxiv.org/abs/2604.06600}{\color{blue}[ArXiv]} |
-\href{https://github.com/AI4SS/IntervenSim}{\color{blue}[Code]}
+\begin{onecolentry}
+\pubnum{3}~\textbf{TRACE: Transfer-Aware Test-Time Training for Tool-Using LLMs} \\
+\textit{\textbf{Xinglang Zhang}, Cheng Qian} |
+\href{https://drive.google.com/file/d/1_pGifgLGeNbYhm97wl-YnW84gn0-pHmm/view?usp=sharing}{\color{blue}[Paper]} |
+\textbf{Conference Submission}
+\end{onecolentry}
 \vspace{0.05 cm}
 
-\textbf{Too Good to Be Real? Diagnosing and Reducing the Gap Between AI Preference and Real User Engagement} \\
+\begin{onecolentry}
+\pubnum{4}~{\small\textbf{Too Good to Be Real? Diagnosing and Reducing the Gap Between AI Preference and Real User Engagement}} \\
 \textit{\textbf{Xinglang Zhang}, Yuanmeng Xiang, et al.} |
 \href{https://arxiv.org/abs/2609.18282}{\color{blue}[ArXiv]} |
-\textbf{Conference Submission} 
+\textbf{Conference Submission}
 \end{onecolentry}
+\vspace{0.05 cm}
 
 \begin{onecolentry}
-\textbf{Semiotic Logical Hexagon Theory for LLM Logical Reasoning} \\
+\pubnum{5}~\textbf{Semiotic Logical Hexagon Theory for LLM Logical Reasoning} \\
 \textit{Yunyao Zhang*, \textbf{Xinglang Zhang*}, et al.} |
 \href{https://arxiv.org/abs/2607.21933}{\color{blue}[ArXiv]} |
 \href{https://github.com/AI4SS/Logic-Agent}{\color{blue}[Code]} |
-\textbf{Journal Submission} 
+\textbf{Journal Submission}
 \end{onecolentry}
-
 \vspace{0.05 cm}
 
 \begin{onecolentry}
-\textbf{Social Intelligence Modeling: A Comprehensive Survey from Social Perception to Social Simulation} \\
+\pubnum{6}~\textbf{Social Intelligence Modeling: A Comprehensive Survey from Social Perception to Social Simulation} \\
 \textit{Zikai Song, Xiajie Li, Yunyao Zhang, \textbf{Xinglang Zhang}, et al.} |
 \href{https://www.researchgate.net/publication/411123257_Social_Intelligence_Modeling_A_Comprehensive_Survey_from_Social_Perception_to_Social_Simulation}{\color{blue}[Paper]} |
 \href{https://github.com/sait-crypto/Awesome-Social-Intelligence-Modeling-System}{\color{blue}[GitHub]}
 \end{onecolentry}
-
 \vspace{0.05 cm}
 
 \begin{onecolentry}
-\textbf{EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards} \\
+\pubnum{7}~\textbf{IntervenSim: Intervention-Aware Social Network Simulation for Opinion Dynamics} \\
+\textit{Yunyao Zhang, Zuocheng Ying, \textbf{Xinglang Zhang}} |
+\href{https://arxiv.org/abs/2604.06600}{\color{blue}[ArXiv]} |
+\href{https://github.com/AI4SS/IntervenSim}{\color{blue}[Code]}
+\end{onecolentry}
+\vspace{0.05 cm}
+
+\begin{onecolentry}
+\pubnum{8}~\textbf{EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards} \\
 \textit{Zhiqing Cui, Xinxiang Yin, Yihong Tang, \textbf{Xinglang Zhang}, et al.} |
 \href{https://cuizhiq.github.io/EarthVerse/}{\color{blue}[Project Page]} |
 \href{https://arxiv.org/abs/2608.23525}{\color{blue}[Paper]}
@@ -275,7 +284,7 @@ urlcolor=primaryColor
 \begin{twocolentry}{
     Jul 2026 -- Present
 }
-\textbf{State-Aware Test-Time Training for Tool-Using Language Models}
+\textbf{TRACE: Transfer-Aware Test-Time Training for Tool-Using LLMs}
 \end{twocolentry}
 
 \vspace{0.10 cm}
@@ -292,13 +301,13 @@ urlcolor=primaryColor
     Research Areas: Test-Time Training, Tool Learning, LLM Agents, Adaptive Data Selection
 
     \begin{highlights}
-        \item \textbf{Framework:} Formulated tool-learning adaptation as a state-aware test-time training problem---deciding which self-generated experiences to learn, at what dose, in which order, and when to stop---and introduced \emph{Transfer Value} to quantify their marginal utility on future queries.
+        \item \textbf{Framework:} Defined \emph{Transfer Value} as the target-specific, state-dependent benefit of learning from a self-generated experience.
 
-        \item \textbf{Method:} Developed a label-free hierarchical experience-selection framework that combines cluster-level NLL probes, confidence signals, and structural diversity, avoiding exhaustive Source--Target transfer evaluation.
+        \item \textbf{Method:} Developed \emph{TRACE}, a gold-free curriculum combining Target Relevance, Current-State Transferability, and Marginal Complementarity through temporary updates and probes.
 
-        \item \textbf{Findings:} Demonstrated that experience utility depends on the current Solver state, exposure dose, and training order; identified a transition from early tool-protocol learning to later semantic learning, with 25/32 held-out experiences flipping from beneficial to harmful after adaptation.
+        \item \textbf{Findings:} Current-state feedback improved selection over stale signals; dynamic selection consistently outperformed a fixed curriculum.
 
-        \item \textbf{Results:} Without access to any external ground-truth or target labels, improved Exact accuracy from 7.71\% for the base model to 38.93\% (+31.22 pp). State-aware reselection further outperformed static selection by +8.95 pp in Exact accuracy. Preparing an \textbf{ICLR} submission.
+        \item \textbf{Results:} Across four tool-use benchmarks and four main models, improved Overall Exact accuracy over frozen models by 13.10--24.42 percentage points. First-author \textbf{ACL 2027} submission \pubnum{3} under review.
     \end{highlights}
 \end{onecolentry}
 
@@ -324,7 +333,7 @@ urlcolor=primaryColor
         
         \item \textbf{Results:} Achieved consistent gains across five logical reasoning benchmarks.
         
-        \item \textbf{Outcome:} Co-first author paper submitted to \textbf{Artificial Intelligence}.
+        \item \textbf{Outcome:} Co-first-author \textbf{Artificial Intelligence} submission \pubnum{5}.
     \end{highlights}
 \end{onecolentry}
 
@@ -341,7 +350,7 @@ urlcolor=primaryColor
     \begin{highlights}
         \item \textbf{Framework:} Proposed \emph{Ontological Preference Measurement} to diagnose synthetic-real preference mismatch across logic, affect, and expression dimensions.
         \item \textbf{Method:} Developed \emph{OMRA} to mask and reconstruct reasoning scaffolds while preserving stance and coherence.
-        \item \textbf{Results:} Reduced marginal, geometric, and transfer gaps by 54.4\% on average across four LLM families; preparing a first-author \textbf{NAACL 2027} submission.
+        \item \textbf{Results:} Reduced marginal, geometric, and transfer gaps by 54.4\% on average across four LLM families; first-author \textbf{NAACL 2027} submission \pubnum{4}. All three reviewers gave an \textbf{OA score of 3.5/5}; top 8\% of submissions.
     \end{highlights}
 \end{onecolentry}
 
@@ -360,7 +369,7 @@ urlcolor=primaryColor
     \begin{highlights}
         \item \textbf{Framework:} Identified \emph{Logical Phase Transitions} in LLM reasoning and proposed a \emph{Neural-Symbolic Tuning} framework to stabilize reasoning under increasing logical complexity.
         \item \textbf{Results:} Across five benchmarks, the method mitigates reasoning collapse, yielding +1.26 (naive) and +3.95 (CoT) average accuracy gains with improved generalization.
-        \item \textbf{Outcome:} Published as first author in \textbf{\distinction{ACL 2026} Main Conference}.
+        \item \textbf{Outcome:} Published as first author in \textbf{\distinction{ACL 2026} Main Conference} \pubnum{1}.
     \end{highlights}
 \end{onecolentry}
 
@@ -378,7 +387,7 @@ urlcolor=primaryColor
     \begin{highlights}
         \item \textbf{Framework \& Benchmark:} Proposed \emph{LogicAgent}, a semiotic-aware logical reasoning framework, and introduced \emph{RepublicQA}, a benchmark jointly modeling logical and semantic complexity.
         \item \textbf{Results:} Achieved state-of-the-art results on RepublicQA (+\textbf{6.25\%}) and strong generalization across four logical reasoning benchmarks (+\textbf{7.05\%}).
-        \item \textbf{Outcome:} Co-authored paper published in \textbf{\distinction{ACL 2026} Main Conference}.
+        \item \textbf{Outcome:} Co-authored paper published in \textbf{\distinction{ACL 2026} Main Conference} \pubnum{2}.
     \end{highlights}
 \end{onecolentry}
 
