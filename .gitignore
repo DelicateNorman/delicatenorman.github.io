@@ -10,3 +10,6 @@ CV/*.out
 CV/*.pdf
 CV/*.xdv
 CV/tmp/
+
+# Local CV template experiments (source and generated files).
+/CV/new_template/

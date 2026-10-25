@@ -162,6 +162,11 @@ urlcolor=primaryColor
 % save the original href command in a new command:
 \let\hrefWithoutArrow\href
 
+% Small institutional marks, preserving their original aspect ratios.
+\usepackage{graphicx}
+\graphicspath{{CV/icons/}{icons/}{../icons/}}
+\newcommand{\institutionicon}[1]{\raisebox{-0.85mm}{\includegraphics[height=4.2mm,width=5.2mm,keepaspectratio]{#1.png}}\hspace{1.2mm}}
+
 \begin{document}
 \newcommand{\AND}{\unskip
 \cleaders\copy\ANDbox\hskip\wd\ANDbox
@@ -217,7 +222,7 @@ urlcolor=primaryColor
 \begin{onecolentry}
 \textbf{Reliable LLM Reasoning.} When and why does reasoning break down, and how can structured or neuro-symbolic mechanisms make it more reliable?\par
 \smallskip
-\textbf{Test-Time Learning \& Self-Evolving Agents.} How can deployed models learn from their own experience without gold supervision, and decide what, when, and how to learn as their state evolves?\par
+\textbf{Test-Time Learning \& Self-Evolving Agents.} How can agents evaluate the value of self-generated experiences and decide what to learn, retain, and reuse as their behavior evolves?\par
 \smallskip
 \textbf{Human--AI Preference \& Social Intelligence.} Where does model behavior diverge from human preferences and social signals, and how can these gaps inform model design?
 \end{onecolentry}
@@ -230,12 +235,17 @@ urlcolor=primaryColor
 % Narrative evidence: the PDF linked by publication [3] in the original CV.
 % https://drive.google.com/file/d/1_pGifgLGeNbYhm97wl-YnW84gn0-pHmm/view?usp=sharing
 % Preserve the linked main-result range: 13.10--24.42 pp.
+\researchproject{Understanding Multi-Agent Systems}{Nov 2026 -- May 2027}
+\begin{onecolentry}
+\textbf{Research Intern}, System Intelligence Group, \institutionicon{microsoft}Microsoft Research Asia \hfill Beijing, China\\
+\textbf{Research Focus:} Multi-Agent Systems
+\end{onecolentry}
+
 \researchtheme{Adaptive Learning \& Self-Evolving Agents}
 \researchproject{TRACE: Transfer-Aware Test-Time Training for Tool-Using LLMs}{Jul 2026 -- Present}
 \begin{onecolentry}
-\textbf{Research Intern}, BLENDER Lab, University of Illinois Urbana-Champaign (UIUC) \\
-\textbf{Mentor:} \href{https://qiancheng0.github.io/}{Cheng Qian}
-% \quad\textbf{Advisor:} \href{https://blender.cs.illinois.edu/hengji.html}{Heng Ji}
+\textbf{Research Intern}, \institutionicon{uiuc}BLENDER Lab, UIUC \\
+\textbf{Mentor:} \href{https://qiancheng0.github.io/}{Cheng Qian}\quad \textbf{Lab Director:} \href{https://blender.cs.illinois.edu/hengji.html}{Heng Ji}
 \begin{highlights}
 \item \textbf{Question.} Test-time training can learn from self-generated tool-use practices, but a limited update budget makes experience selection essential. Formulated the question: \emph{which experience is worth learning now, given what the model has already learned?}
 \item \textbf{Finding.} Characterized \emph{Transfer Value} as the benefit of learning from an experience for a target distribution. Established that this utility is \textbf{relational and state-dependent}: the same experience can help one query and harm another, and its value can reverse as the solver updates. Demonstrated cross-query transfer and non-monotonic changes in utility. In a controlled probe, \textbf{30 of 32} initially beneficial experiences became harmful after 32 updates; some became useful again later, motivating repeated selection rather than a fixed ranking.
@@ -244,11 +254,24 @@ urlcolor=primaryColor
 \end{highlights}
 \end{onecolentry}
 
+\researchproject{Anchor: Locally Verified Memory for Self-Evolving Agents}{Aug 2026 -- Oct 2026}
+\begin{onecolentry}
+{\small \textbf{Research Collaborator}, \institutionicon{hku}HKU CDS \\
+\textbf{Advisor:} \href{https://openreview.net/profile?id=~Jian_Qian2}{Jian Qian}}\par
+\begin{highlights}
+\item \textbf{Question.} Co-formulated the problem of experience valuation in self-evolving agents: self-generated memories can be plausible yet redundant or harmful, while trajectory-level feedback does not reveal their actual decision value. Asked whether a memory's influence on its source decision can provide evidence for selective retention.
+\item \textbf{Method.} Co-proposed Anchor, a memory-admission framework that replays source decisions with and without candidate memories under a frozen policy. Combined \textbf{behavioral shift magnitude} (Jensen--Shannon divergence) with \textbf{source-role alignment}, retaining memories that reinforce successful actions or correct failed ones before incorporating them into an evolving memory bank.
+\item \textbf{Evidence.} Co-conducted experiments on ALFWorld and WebShop across two LLM backbones. With Qwen3.5-27B, Anchor achieved \textbf{96.27\% ALFWorld success} and \textbf{73.50 WebShop mean score}, outperforming the strongest respective baselines (92.54\% and 62.74), while retaining \textbf{41\% fewer memories} than unfiltered storage. Second-author paper \pubnum{9}.
+\end{highlights}
+\end{onecolentry}
+
+\newpage
+\section{Research Experience (continued)}
 \researchtheme{Reliable LLM Reasoning}
 % Narrative evidence: https://arxiv.org/abs/2601.02902 (v2).
 \researchproject{Logical Phase Transitions: Diagnosing and Mitigating Reasoning Collapse}{Aug 2025 -- Jan 2026}
 \begin{onecolentry}
-\textbf{Project Leader}, Intelligent Media Computing and Network Security Lab, HUST \\
+\textbf{Project Leader}, Intelligent Media Computing and Network Security Lab, \institutionicon{hust}HUST \\
 \textbf{Advisor:} \href{https://scholar.google.com/citations?user=1qnuOZsAAAAJ&hl=en}{Zikai Song}
 \begin{highlights}
 \item Investigated where reasoning becomes unreliable as \emph{logical complexity} increases, asking whether collapse follows identifiable regimes that aggregate benchmark scores obscure.
@@ -260,12 +283,10 @@ urlcolor=primaryColor
 \end{onecolentry}
 
 % Narrative evidence: https://arxiv.org/abs/2509.24765 and https://arxiv.org/abs/2607.21933.
-\newpage
-\section{Research Experience (continued)}
-\researchtheme{Reliable LLM Reasoning (continued)}
+\vspace{2mm}
 \researchproject{From LogicAgent to HexLogicAgent: Structuring Meaning Before Deduction}{}
 \begin{onecolentry}
-\textbf{Research Assistant}, Intelligent Media Computing and Network Security Lab, HUST \\
+\textbf{Research Assistant}, Intelligent Media Computing and Network Security Lab, \institutionicon{hust}HUST \\
 \textbf{Advisor:} \href{https://scholar.google.com/citations?user=1qnuOZsAAAAJ&hl=en}{Zikai Song} \\
 {\small LogicAgent: Feb -- Aug 2025\quad HexLogicAgent: Mar -- Jul 2026}
 \begin{highlights}
@@ -282,13 +303,13 @@ urlcolor=primaryColor
 % Review scores and submission status are preserved from the original CV.
 \researchproject{OMRA: Diagnosing and Reducing Synthetic--Real Preference Misalignment}{Jan -- May 2026}
 \begin{onecolentry}
-\textbf{Project Leader}, Intelligent Media Computing and Network Security Lab, HUST \\
+\textbf{Project Leader}, Intelligent Media Computing and Network Security Lab, \institutionicon{hust}HUST \\
 \textbf{Advisor:} \href{https://scholar.google.com/citations?user=1qnuOZsAAAAJ&hl=en}{Zikai Song}
 \begin{highlights}
 \item Asked whether the qualities LLMs associate with high engagement match real user responses. Studied \textbf{1.17 million answers} to \textbf{25,978 questions} on Zhihu, Quora, and Reddit; introduced \emph{Ontological Preference Measurement} along logic, affect, and expression dimensions.
 \item Identified \emph{logic overbinding}: as target engagement increases, LLMs add explicit reasoning structure, while observed user engagement is more strongly associated with affective and expressive salience.
 \item Developed \emph{Ontology-Masked Reasoning Autoencoding (OMRA)} to mask and reconstruct over-explained spans while preserving stance, factual content, and coherence.
-\item Reduced marginal, geometric, and transfer gaps by \textbf{54.4\% on average} across four LLM families. The results motivate grounding preference alignment in observed social signals. First-author NAACL 2027 submission \pubnum{4}; all three reviewers gave \textbf{OA 3.5/5}, with a reported top-8\% ranking.
+\item Reduced marginal, geometric, and transfer gaps by \textbf{54.4\% on average} across four LLM families. The results motivate grounding preference alignment in observed social signals. First-author NAACL 2027 submission \pubnum{4}; all three reviewers gave \textbf{OA 3.5/5}, and the Area Chair gave a \textbf{meta-review score of 4}, with a reported top-8\% ranking.
 \end{highlights}
 \end{onecolentry}
 
@@ -299,6 +320,9 @@ urlcolor=primaryColor
 \end{highlights}
 \end{onecolentry}
 
+\newpage
+\begingroup
+\fontsize{10}{11}\selectfont
 \section{Publications}
 {\small * Equal contribution.}\par\smallskip
 
@@ -365,8 +389,15 @@ urlcolor=primaryColor
 \href{https://cuizhiq.github.io/EarthVerse/}{\color{blue}[Project Page]} |
 \href{https://arxiv.org/abs/2608.23525}{\color{blue}[Paper]}
 \end{onecolentry}
+\vspace{0.05 cm}
+\begin{onecolentry}
+\pubnum{9}~\textbf{From Reflection to Co-Evolution: Self-Evolving Agents with Locally Verified Memory} \\
+\textit{Xinxiang Yin, \textbf{Xinglang Zhang}, et al.} | \href{https://openreview.net/forum?id=PWFIHNE28h}{\color{blue}[Paper]}
+\end{onecolentry}
 
-\newpage
+
+\endgroup
+
 \section{Selected Funded Projects}
 
 \begin{onecolentry}
@@ -396,13 +427,14 @@ Project Lead \quad | \quad \textbf{CNY 20,000 (approx. US\$2,980)}
 \honorentry{Triple-A ("Sanhao") Student Scholarship}{\distinction{Top 5.5\%}}{2025 -- 2026}
 \honorentry{National Scholarship}{Highest Honor for Chinese Undergraduates; \distinction{Top 0.3\% Nationwide}}{2024 -- 2025}
 \honorentry{Triple-A ("Sanhao") Student Scholarship}{\distinction{Top 5.5\%}}{2024 -- 2025}
-\honorentry{Outstanding Youth League Member}{\distinction{Top 4.1\%}}{2024 -- 2025}
-\honorentry{Outstanding Youth League Cadre}{\distinction{Top 4.1\%}}{2024 -- 2025}
-\honorentry{Academic Excellence Scholarship \& Self-improvement Scholarship}{\distinction{Top 10\%}}{2024 -- 2025}
+% \honorentry{Outstanding Youth League Member}{\distinction{Top 4.1\%}}{2024 -- 2025}
+% \honorentry{Outstanding Youth League Cadre}{\distinction{Top 4.1\%}}{2024 -- 2025}
+% \honorentry{Academic Excellence Scholarship \& Self-improvement Scholarship}{\distinction{Top 10\%}}{2024 -- 2025}
 \end{itemize}
 \end{onecolentry}
 
 \vspace{0.12cm}
+\newpage
 \section{Service}
 
 \begin{onecolentry}
@@ -416,7 +448,7 @@ Project Lead \quad | \quad \textbf{CNY 20,000 (approx. US\$2,980)}
 \end{onecolentry}
 
 \begin{onecolentry}
-\textbf{Selected Rising Star Poster Presenter}, X-AGI Conference \hfill Oct. 17 -- 18, 2026 \textit{(upcoming)}
+\textbf{Selected Rising Star Poster Presenter}, X-AGI Conference \hfill Oct. 17 -- 18, 2026
 \end{onecolentry}
 
 \section{Skills}

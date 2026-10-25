@@ -1,0 +1,5 @@
+Microsoft: https://learn.microsoft.com/en-us/entra/identity-platform/media/howto-add-branding-in-apps/ms-symbollockup_mssymbol_19.png
+UIUC: https://cdn.brand.illinois.edu/logos/block-i.png
+UIUC reference: https://web.brand.illinois.edu/logos/
+HUST: reused existing website asset assets/华中科技大学-logo-512px.png (official site requests returned HTTP 403).
+HKU: https://www.hku.hk/etc.clientlibs/hkucms/clientlibs/clientlib-site/resources/icon-192x192.png

@@ -70,14 +70,14 @@ urlcolor=primaryColor
 \setlength{\topskip}{0pt} % no top skip
 \setlength{\columnsep}{0.15cm} % set column seperation
 \pagenumbering{gobble} % no page numbering
-\linespread{0.97} % compact line spacing
+\linespread{0.94} % compact line spacing
 
 \titleformat{\section}{\needspace{3\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
 \titlespacing{\section}{
     -1pt
 }{
-    0.22 cm
+    0.16 cm
 }{
     0.12 cm
 }
@@ -160,6 +160,11 @@ urlcolor=primaryColor
 
 % save the original href command in a new command:
 \let\hrefWithoutArrow\href
+
+% Small institutional marks, preserving their original aspect ratios.
+\usepackage{graphicx}
+\graphicspath{{CV/icons/}{icons/}{../icons/}}
+\newcommand{\institutionicon}[1]{\raisebox{-0.85mm}{\includegraphics[height=4.2mm,width=5.2mm,keepaspectratio]{#1.png}}\hspace{1.2mm}}
 
 \begin{document}
 \newcommand{\AND}{\unskip
@@ -278,8 +283,24 @@ urlcolor=primaryColor
 \href{https://cuizhiq.github.io/EarthVerse/}{\color{blue}[Project Page]} |
 \href{https://arxiv.org/abs/2608.23525}{\color{blue}[Paper]}
 \end{onecolentry}
+\vspace{0.05 cm}
+\begin{onecolentry}
+\pubnum{9}~\textbf{From Reflection to Co-Evolution: Self-Evolving Agents with Locally Verified Memory} \\
+\textit{Xinxiang Yin, \textbf{Xinglang Zhang}, et al.} | \href{https://openreview.net/forum?id=PWFIHNE28h}{\color{blue}[Paper]}
+\end{onecolentry}
+
 
 \section{Research Experience}
+
+\begin{twocolentry}{Nov 2026 -- May 2027}
+\textbf{Understanding Multi-Agent Systems}
+\end{twocolentry}
+\begin{onecolentry}
+\textbf{Research Intern}, System Intelligence Group, \institutionicon{microsoft}Microsoft Research Asia \hfill Beijing, China\\
+\textbf{Research Focus:} Multi-Agent Systems
+\end{onecolentry}
+\vspace{0.15 cm}
+
 
 \begin{twocolentry}{
     Jul 2026 -- Present
@@ -290,14 +311,11 @@ urlcolor=primaryColor
 \vspace{0.10 cm}
 
 \begin{onecolentry}
-    \textbf{Research Intern}, BLENDER Lab, University of Illinois Urbana-Champaign (UIUC) \\
+    \textbf{Research Intern}, \institutionicon{uiuc}BLENDER Lab, UIUC \\
     \textbf{Mentor:}
     \href{https://qiancheng0.github.io/}
-    {\textcolor{blue}{Cheng Qian}}
-    \quad
-    \textbf{Advisor:}
-    \href{https://blender.cs.illinois.edu/hengji.html}
-    {\textcolor{blue}{Heng Ji}} \\
+    {\textcolor{blue}{Cheng Qian}}\quad \textbf{Lab Director:} \href{https://blender.cs.illinois.edu/hengji.html}{\textcolor{blue}{Heng Ji}}
+    \\
     Research Areas: Test-Time Training, Tool Learning, LLM Agents, Adaptive Data Selection
 
     \begin{highlights}
@@ -311,6 +329,18 @@ urlcolor=primaryColor
     \end{highlights}
 \end{onecolentry}
 
+\begin{onecolentry}
+\textbf{Anchor: Locally Verified Memory for Self-Evolving Agents}\hfill {\small Aug 2026 -- Oct 2026}\\
+{\textbf{Research Collaborator}, \institutionicon{hku}HKU CDS \\
+\textbf{Advisor:} \href{https://openreview.net/profile?id=~Jian_Qian2}{\textcolor{blue}{Jian Qian}}}\par
+\begin{highlights}
+\item \textbf{Framework.} Co-proposed Anchor, a self-evolving agent memory framework that evaluates candidate memories through paired decision replay, combining behavioral shift magnitude and source-role alignment to selectively retain useful experiences.
+\item \textbf{Results.} Co-conducted experiments across ALFWorld, WebShop, and two LLM backbones. Achieved \textbf{96.27\% ALFWorld success} and \textbf{73.50 WebShop score} with Qwen3.5-27B, outperforming the strongest baselines while retaining \textbf{41\% fewer memories} than unfiltered storage. Second-author paper \pubnum{9}.
+\end{highlights}
+\end{onecolentry}
+
+\newpage
+\section{Research Experience (continued)}
 \begin{twocolentry}{
     Mar 2026 -- Jul 2026
 }
@@ -320,7 +350,7 @@ urlcolor=primaryColor
 \vspace{0.10 cm}
 
 \begin{onecolentry}
-    \textbf{Research Assistant}, Intelligent Media Computing and Network Security Lab, HUST \\
+    \textbf{Research Assistant}, Intelligent Media Computing and Network Security Lab, \institutionicon{hust}HUST \\
     \textbf{Advisor:} 
     \href{https://scholar.google.com/citations?user=1qnuOZsAAAAJ&hl=en}
     {\textcolor{blue}{Zikai Song}},
@@ -344,13 +374,13 @@ urlcolor=primaryColor
 \end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
-    \textbf{Project Leader}, Intelligent Media Computing and Network Security Lab, HUST \\
+    \textbf{Project Leader}, Intelligent Media Computing and Network Security Lab, \institutionicon{hust}HUST \\
     \textbf{Advisor:} \href{https://scholar.google.com/citations?user=1qnuOZsAAAAJ&hl=en}{\textcolor{blue}{Zikai Song}},
     Research Areas: Preference Alignment, Social Media Analysis, Controllable Text Generation
     \begin{highlights}
         \item \textbf{Framework:} Proposed \emph{Ontological Preference Measurement} to diagnose synthetic-real preference mismatch across logic, affect, and expression dimensions.
         \item \textbf{Method:} Developed \emph{OMRA} to mask and reconstruct reasoning scaffolds while preserving stance and coherence.
-        \item \textbf{Results:} Reduced marginal, geometric, and transfer gaps by 54.4\% on average across four LLM families; first-author \textbf{NAACL 2027} submission \pubnum{4}. All three reviewers gave an \textbf{OA score of 3.5/5}; top 8\% of submissions.
+        \item \textbf{Results:} Reduced marginal, geometric, and transfer gaps by 54.4\% on average across four LLM families; first-author \textbf{NAACL 2027} submission \pubnum{4}. All three reviewers gave an \textbf{OA score of 3.5/5}; the Area Chair gave a \textbf{meta-review score of 4}; top 8\% of submissions.
     \end{highlights}
 \end{onecolentry}
 
@@ -363,7 +393,7 @@ urlcolor=primaryColor
 \end{twocolentry}
 \vspace{0.05 cm}
 \begin{onecolentry}
-    \textbf{Project Leader}, Intelligent Media Computing and Network Security Lab, HUST \\
+    \textbf{Project Leader}, Intelligent Media Computing and Network Security Lab, \institutionicon{hust}HUST \\
     \textbf{Advisor:} \href{https://scholar.google.com/citations?user=1qnuOZsAAAAJ&hl=en}{\textcolor{blue}{Zikai Song}}, 
     Research Areas: LLM Evaluation, Logical Reasoning, Neural-Symbolic AI
     \begin{highlights}
@@ -382,7 +412,7 @@ urlcolor=primaryColor
 \end{twocolentry}
 \vspace{0.05 cm}
 \begin{onecolentry}
-    \textbf{Research Assistant}, Intelligent Media Computing and Network Security Lab, HUST \\
+    \textbf{Research Assistant}, Intelligent Media Computing and Network Security Lab, \institutionicon{hust}HUST \\
     \textbf{Advisor:} \href{https://scholar.google.com/citations?user=1qnuOZsAAAAJ&hl=en}{\textcolor{blue}{Zikai Song}}, Research Areas: LLM Reasoning, Neural-Symbolic AI, Semantic and Symbolic Reasoning
     \begin{highlights}
         \item \textbf{Framework \& Benchmark:} Proposed \emph{LogicAgent}, a semiotic-aware logical reasoning framework, and introduced \emph{RepublicQA}, a benchmark jointly modeling logical and semantic complexity.
@@ -420,6 +450,7 @@ urlcolor=primaryColor
 \end{highlights}
 \end{onecolentry}
 
+\newpage
 \section{Honors}
 
 \begin{onecolentry}
@@ -430,9 +461,9 @@ urlcolor=primaryColor
 \item \textbf{Triple-A ("Sanhao") Student Scholarship} \honornote{\distinction{Top 5.5\%}} \hfill 2025 -- 2026
 \item \textbf{National Scholarship} \honornote{Highest Honor for Chinese Undergraduates; \distinction{Top 0.3\% Nationwide}} \hfill 2024 -- 2025
 \item \textbf{Triple-A ("Sanhao") Student Scholarship} \honornote{\distinction{Top 5.5\%}} \hfill 2024 -- 2025
-\item \textbf{Outstanding Youth League Member} \honornote{\distinction{Top 4.1\%}} \hfill 2024 -- 2025
-\item \textbf{Outstanding Youth League Cadre} \honornote{\distinction{Top 4.1\%}} \hfill 2024 -- 2025
-\item \textbf{Academic Excellence Scholarship} \& \textbf{Self-improvement Scholarship} \honornote{\distinction{Top 10\%}} \hfill 2024 -- 2025
+% \item \textbf{Outstanding Youth League Member} \honornote{\distinction{Top 4.1\%}} \hfill 2024 -- 2025
+% \item \textbf{Outstanding Youth League Cadre} \honornote{\distinction{Top 4.1\%}} \hfill 2024 -- 2025
+% \item \textbf{Academic Excellence Scholarship} \& \textbf{Self-improvement Scholarship} \honornote{\distinction{Top 10\%}} \hfill 2024 -- 2025
 \end{highlights}
 \end{onecolentry}
 
